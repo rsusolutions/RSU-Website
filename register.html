@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='description' content="computer hardware and software mobile app developing take services">
+    <meta name='keywords' content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RSU Solutions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">      
+	<link href="css/main.css" rel="stylesheet">
+	 <link href="css/responsive.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    
+  </head>
+  <body class="homepage">   
+	<header data-include="header" id="header">
+        
+        
+		
+    </header><!--/header-->
+		
+	
+	<section id="register-page">
+        <div class="container">
+            <div class="center">        
+                <h2>Registration</h2>
+                <p class="lead">Thank you for choosing rsu solution. Please provide the following information to help us serve you better</p>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="form-group">
+                            <label>Name *</label>
+                            <input type="text" name="name" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="number" name="mobile" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select name="category" class="form-control" id="category" required="required">
+                                <option value="software">Software</option>
+                                <option value="mobile services">Mobile App</option>
+                                <option value="hardware">Hardware</option>
+                            </select>
+                        </div>                     
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea name="message" id="message" required="required" class="form-control" rows="12"></textarea>
+                        </div>                        
+                        <div class="form-group">
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required"  onclick="btnEmailSend()">Book</button>
+                        </div>
+                    </div>
+                </form> 
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+
+    
+
+
+<div id=serializearray></div>
+
+
+
+    <section id="bottom" data-include="bottom">
+          
+    </section><!--/#bottom-->
+	
+	<div class="top-bar" data-include="bottom-1">
+		 
+	</div><!--/.top-bar-->
+	
+	<footer id="footer" class="midnight-blue" data-include="footer">
+         
+    </footer><!--/#footer-->
+     <script>
+function btnEmailSend() {
+   
+        var email="";
+        var Cus_Data="";
+        var category="";
+        var x = $("form").serializeArray();
+    $.each(x, function(i, field){
+       $("#serializearray").append(field.name + ":" + field.value + " ");
+       if(field.name=="email"){
+          email= field.value;
+        }
+        if(field.name=="category"){
+          category= field.value;
+        }
+        Cus_Data+=field.name + ":" + field.value + "</br>";
+    });
+
+    if(field.value!=""){
+
+        var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
+        EmailSend(Reqdata,"1");
+        
+
+        var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Rsu Solution Services   </Subject><Message> Thanks for choosing our services. Get in touch shortly!! </Message> <Remarks> service customer mail  </Remarks></Root>"
+        EmailSend(cus_Reqdata,"0");
+        alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
+        
+    }
+}
+
+
+</script>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>   
+    <script src="js/wow.min.js"></script>
+	<script src="js/main.js"></script>
+      <script src="js/email.js"></script>
+      <script src="js/Script.js"></script>
+
+   
+  </body>
+</html>
