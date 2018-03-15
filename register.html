@@ -95,11 +95,7 @@
     </footer><!--/#footer-->
      <script>
      
-     $(document).ready(function(){
-    $("#book").click(function(){
-        
-    });
-});
+     
 function btnEmailSend() {
         $("div#divLoading").addClass('show');
         var email="";
@@ -118,8 +114,8 @@ function btnEmailSend() {
     });
 
 
-        //if( email!="" && Cus_Data!="" && category!="")
-        //{
+        if( email!="" && Cus_Data!="" && category!="")
+        {
             var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
             //width='100%' border='0' cellspacing='0' cellpadding='20'
@@ -129,7 +125,7 @@ function btnEmailSend() {
             var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly. <![CDATA[<br/>]]> <![CDATA[<br/>]]> <![CDATA[<br/>]]> <![CDATA["+html+" ]]> <![CDATA[<br/>]]> Regards,<![CDATA[<br/>]]> <![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744<![CDATA[<br/>]]> rsusolutionhelpdesk@gmail.com <![CDATA[<br/>]]> http://rsusolutions.tk     </Message> <Remarks> service customer mail  </Remarks></Root>"
             EmailSend(cus_Reqdata);
             alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
-        //}
+        }
         $("div#divLoading").addClass('hide');
         
     
