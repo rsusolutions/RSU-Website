@@ -1,10 +1,8 @@
 
-var k="";
- function EmailSend(Reqdata,flag)
+ function EmailSend(Reqdata)
  {
 
     try {
-        k=flag;
                 
                 ExecutePageMethod(Reqdata, OnSuccess, OnFailure);
                

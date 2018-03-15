@@ -110,15 +110,17 @@ function btnEmailSend() {
         Cus_Data+=field.name + ":" + field.value + "</br>";
     });
 
-    if(field.value!=""){
 
-        var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
-        EmailSend(Reqdata,"1");
-        
+        if( email!="" && Cus_Data!="" && category!="")
+        {
+            var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
+            EmailSend(Reqdata);
+            
 
-        var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Rsu Solution Services   </Subject><Message> Thanks for choosing our services. Get in touch shortly!! </Message> <Remarks> service customer mail  </Remarks></Root>"
-        EmailSend(cus_Reqdata,"0");
-        alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
+            var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Rsu Solution Services   </Subject><Message> Thanks for choosing our services. Get in touch shortly!! </Message> <Remarks> service customer mail  </Remarks></Root>"
+            EmailSend(cus_Reqdata);
+            alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
+        }
         
     }
 }
