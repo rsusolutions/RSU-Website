@@ -116,10 +116,10 @@ function btnEmailSend() {
             var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
             //width='100%' border='0' cellspacing='0' cellpadding='20'
-            var html="<a href='https://rsusolutions.tk'><img src='http://rsusolutions.tk/images/rsu-email.jpg'></a>";
+            var html="<a href='http://rsusolutions.tk'><img src='http://rsusolutions.tk/images/rsu-email.jpg'></a>";
                 //html+="<tr><td><p>RSU Solutions.</p></td></tr></table>";
             
-            var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly. <![CDATA[<br/>]]> <![CDATA[<br/>]]> Regards,<![CDATA[<br/>]]> <![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744<![CDATA[<br/>]]> rsusolutionhelpdesk@gmail.com <![CDATA[<br/>]]> http://rsusolutions.tk    <![CDATA[<br/>]]> <![CDATA["+html+" ]]> </Message> <Remarks> service customer mail  </Remarks></Root>"
+            var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly. <![CDATA[<br/>]]> <![CDATA[<br/>]]> <![CDATA[<br/>]]> <![CDATA["+html+" ]]> Regards,<![CDATA[<br/>]]> <![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744<![CDATA[<br/>]]> rsusolutionhelpdesk@gmail.com <![CDATA[<br/>]]> http://rsusolutions.tk     </Message> <Remarks> service customer mail  </Remarks></Root>"
             EmailSend(cus_Reqdata);
             alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
         //}
