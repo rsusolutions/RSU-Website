@@ -35,7 +35,7 @@
         <div class="container">
             <div class="center">        
                 <h2>Registration</h2>
-                <p class="lead">Thank you for choosing rsu solution. Please provide the following information to help us serve you better</p>
+                <p class="lead">Thank you for choosing rsu solutions. Please provide the following information to help us serve you better</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
@@ -100,7 +100,7 @@ function btnEmailSend() {
         var category="";
         var x = $("form").serializeArray();
     $.each(x, function(i, field){
-       $("#serializearray").append(field.name + ":" + field.value + " ");
+       //$("#serializearray").append(field.name + ":" + field.value + " ");
        if(field.name=="email"){
           email= field.value;
         }
