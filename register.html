@@ -97,11 +97,11 @@
      
      $(document).ready(function(){
     $("#book").click(function(){
-        $("div#divLoading").addClass('show');
+        
     });
 });
 function btnEmailSend() {
-   
+        $("div#divLoading").addClass('show');
         var email="";
         var Cus_Data="";
         var category="";
@@ -130,6 +130,7 @@ function btnEmailSend() {
             EmailSend(cus_Reqdata);
             alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
         //}
+        $("div#divLoading").addClass('hide');
         
     
 }
