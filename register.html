@@ -115,8 +115,8 @@ function btnEmailSend() {
         {
             var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
-            
-            var html="<table width='100%' border='0' cellspacing='0' cellpadding='20' background='http://rsusolutions.tk/images/bg.jpg'>";
+            //width='100%' border='0' cellspacing='0' cellpadding='20'
+            var html="<table  background='http://rsusolutions.tk/images/bg.jpg'>";
                 html+="<tr><td><p>RSU Solutions.</p></td></tr></table>";
             
             var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly. <![CDATA[<br/>]]> <![CDATA[<br/>]]> Regards,<![CDATA[<br/>]]> <![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744<![CDATA[<br/>]]> rsusolutionhelpdesk@gmail.com <![CDATA[<br/>]]> http://rsusolutions.tk    <![CDATA[<br/>]]> <![CDATA["+html+" ]]> </Message> <Remarks> service customer mail  </Remarks></Root>"
