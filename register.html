@@ -107,13 +107,13 @@ function btnEmailSend() {
         if(field.name=="category"){
           category= field.value;
         }
-        Cus_Data+=" " +field.name + ":" + field.value + "</br>";
+        Cus_Data+=field.name + ":" + field.value ;
     });
 
 
         if( email!="" && Cus_Data!="" && category!="")
         {
-            var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
+            var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message><![CDATA["+Cus_Data+"]]></Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
             
 
