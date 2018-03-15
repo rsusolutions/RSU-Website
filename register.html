@@ -116,8 +116,10 @@ function btnEmailSend() {
             var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
             
-
-            var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly.<![CDATA[<br/>]]> Regards,<![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744   <![CDATA[<br/>]]> <![CDATA[<div class='container'><div class='row'><div class='col-lg-12'><div class='social'><ul class='social-share'><li><a href='https://www.facebook.com/RSU-Solutions-169355993873585/'><i class='fa fa-facebook'></i></a></li><li><a href='https://twitter.com/RSU_Solutions'><i class='fa fa-twitter'></i></a></li><li><a href='https://www.linkedin.com/in/rsu-solutions/'><i class='fa fa-linkedin'></i></a></li> <li><a href='skype:8220084304'><i class='fa fa-skype'></i></a></li></ul></div></div></div></div>]]></Message> <Remarks> service customer mail  </Remarks></Root>"
+            var html="<table width='100%' border='0' cellspacing='0' cellpadding='20' background='http://rsusolutions.tk/images/bg.jpg'>";
+                html+="<tr><td><p>RSU Solutions.</p></td></tr></table>";
+            
+            var cus_Reqdata="<Root> <ToID>"+email+"</ToID><Subject> Thank you for Register!!</Subject><Message>Thanks for contacting us! We will get in touch with you shortly. <![CDATA[<br/>]]> <![CDATA[<br/>]]> Regards,<![CDATA[<br/>]]> <![CDATA[<br/>]]> RSU Solutions<![CDATA[<br/>]]> 8870809744<![CDATA[<br/>]]> rsusolutionhelpdesk@gmail.com <![CDATA[<br/>]]> http://rsusolutions.tk    <![CDATA[<br/>]]> <![CDATA["+html+" ]]> </Message> <Remarks> service customer mail  </Remarks></Root>"
             EmailSend(cus_Reqdata);
             alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!");
         }
