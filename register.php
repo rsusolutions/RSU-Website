@@ -23,10 +23,74 @@
     <![endif]-->       
     
   </head>
-  <body class="homepage">   
+  <body class="homepage"> 
+    <? php include 'footer.php';
+    ?>
+    <?php
+    if(isset($_POST['submit'])){
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $mobile=$_POST['mobile'];
+        $category=$_POST['category'];
+        $message=$_POST['message'];
+
+        require 'PHPMailerAutoload.php';
+        require("newMail/class.phpmailer.php");
+        require("newMail/class.smtp.php");
+
+        $mail = new PHPMailer;
+
+        $mail->isSMTP();                            // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                     // Enable SMTP authentication
+        $mail->Username = 'rsusolutionhelpdesk@gmail.com';          // SMTP username
+        $mail->Password = 'rsu@1234'; // SMTP password
+        $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                          // TCP port to connect to
+
+        $mail->setFrom('rsusolutionhelpdesk@gmail.com', 'Rsu Solutions');
+        $mail->addReplyTo('rsusolution@gmail.com', 'Rsu Solutions');
+        $mail->addAddress($email);   // Add a recipient
+        //$mail->addCC('asukkoorj@example.com');
+        // $mail->addBCC('bcc@example.com');
+
+        $mail->isHTML(true);  // Set email format to HTML
+
+        $bodyContent = '<p>Thankyou for choosing Rsu services.. Your Request has been Approved.. Get in touch Shortly!!</p>';
+        $bodyContent .= '<a href="rsusolutions.com/register.php"><img src="http://rsusolutions.com/images/rsu-email.jpg" style="width:70%;height:450px;" alt="RSU Solutions" class="center"></a>';
+        
+        $adminmsg ='Name:' .$name .'<br>';
+        $adminmsg .='Email:' .$email.'<br>';
+        $adminmsg .='Mobile:' .$mobile.'<br>';
+        $adminmsg .='Category:' .$category.'<br>';
+        $adminmsg .='Message:' .$message.'<br>';
+
+
+
+        $mail->Subject = 'RSU Services';
+        $mail->Body    = $bodyContent;
+
+        if(!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            echo '<script language="javascript">';
+            echo 'alert("Appointment Sent Sucessfully!!..Our Executive contact soon!!")';
+            echo '</script>';
+        }
+
+        $mail->ClearAddresses();
+
+        $mail->AddAddress('abdulkafoor1996@gmail.com');
+        $mail->addCC('asukkoorj@example.com');
+        $mail->Body = $adminmsg;
+        $mail->Send();
+
+    }
+
+    ?>
+
 	<header data-include="header" id="header">
-        
-        
 		
     </header><!--/header-->
 		
@@ -39,15 +103,15 @@
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
                     <div class="col-sm-10 col-sm-offset-1">
                         <div class="form-group">
                             <label>Name *</label>
-                            <input type="text" name="name" class="form-control" required="required">
+                            <input type="text" name="name" class="form-control" required="">
                         </div>
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" name="email" class="form-control" required="required">
+                            <input type="email" name="email" class="form-control" required="">
                         </div>
                         <div class="form-group">
                             <label>Phone *</label>
@@ -55,22 +119,26 @@
                         </div>
                         <div class="form-group">
                             <label for="category">Category *</label>
-                            <select name="category" class="form-control" id="category" required="required">
+                            <select name="category" class="form-control" id="category" required="">
                                 <option value="software">Software</option>
                                 <option value="mobile services">Mobile App</option>
                                 <option value="hardware">Hardware</option>
+                                <option value="others">Others</option>
                             </select>
                         </div>                     
                         <div class="form-group">
                             <label>Message *</label>
-                            <textarea name="message" id="message" required="required" class="form-control" rows="12"></textarea>
+                            <textarea name="message" id="message" required="" class="form-control" rows="12"></textarea>
                         </div>                        
                         <div class="form-group">
-                        <button id="book" type="submit" name="submit" class="btn btn-primary btn-lg pull-right" required="required"  onclick="btnEmailSend()">Book</button>
+                        <button id="book" type="submit" name="submit" class="btn btn-primary btn-lg pull-right" required="required">Book</button>
                         <button id="reset1" class="btn btn-danger btn-lg " type="reset" value="Reset">Clear</button>
                         </div>
                     </div>
-                </form> 
+                </form>
+                <div id="loading">
+                    <img src="/images/loading.gif" alt="loading">
+                </div> 
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#contact-page-->

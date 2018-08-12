@@ -32,21 +32,24 @@ jQuery(function($) {
 		});
 	});
 
-	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
 
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
-		});
-	});
+// Contact form
+	$(function() {
+
+  	
+    $('#book').click(function(){
+    	$('html,body').animate({
+        scrollTop: $("#header").offset().top},
+        'slow');
+    document.getElementById("main-contact-form").style.display = "none";
+    $('#loading').fadeIn(1);
+    $('#loading').fadeOut(15000);
+    document.getElementById("main-contact-form").style.display = "block";
+  });
+  
+});
+	
+	
 
 	
 	

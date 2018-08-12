@@ -11,6 +11,16 @@ body {
   color:#333;
   line-height:1.6em;
 }
+#loading{
+  display:none;
+  position:absolute;
+  top:0;      left:0;
+
+  width:100%; height:100%;
+  background:#f6fcb0;
+  vertical-align:middle;
+  text-align:center;
+}
 
 h1,
 h2,
