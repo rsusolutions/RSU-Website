@@ -37,7 +37,7 @@ jQuery(function($) {
 	$(function() {
 
   	
-    $('#book').click(function(){
+    $('book').click(function(){
     	$('html,body').animate({
         scrollTop: $("#header").offset().top},
         'slow');

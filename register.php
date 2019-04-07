@@ -187,8 +187,10 @@ function btnEmailSend() {
     });
 
 
-        if( email!="" && Cus_Data!="" && category!="" && mobile!="")
+        if( email.trim()!="" && Cus_Data!="" && category!="" && mobile!="")
         {
+            $("book").click();
+
             $("div#divLoading").addClass('show');
             var Reqdata="<Root> <ToID>rsusolution@gmail.com</ToID><Subject>"+category+"</Subject><Message> "+Cus_Data+"</Message> <Remarks>  Request mail  </Remarks></Root>"
             EmailSend(Reqdata);
@@ -217,8 +219,8 @@ function btnEmailSend() {
     <script src="js/jquery.isotope.min.js"></script>   
     <script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
-      <script src="js/email.js"></script>
-      <script src="js/Script.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/Script.js"></script>
 
    
   </body>
