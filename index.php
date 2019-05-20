@@ -134,8 +134,8 @@
         <!-- Container -->
         <div class="container h-100 d-flex">
             <div class="jumbotron my-auto ml-auto" data-aos="fade-right" data-aos-duration="600">
-                <h1>Need Boost For Your Website?</h1>
-                <h2 class="lead">Fill in the form to get a free quote for your website seo</h2>
+                <h1>Need Boost For Your Business?</h1>
+                <h2 class="lead">Fill in the form to get a free quote for your business</h2>
                 <!-- Grid row-->
                 <div class="row">
                     <div class="col-md-12">
@@ -167,7 +167,7 @@
                                     <textarea type="text" name="message" class="form-control" placeholder="Extra Message" rows="4" required></textarea>
                                 </div>
                             </div>
-                            <span>Or Call <a href="#">9789 888 344</a></span>
+                            <span>Or Call <a href="#">88708 09744</a></span>
                             <button type="submit" name="submit" class="btn btn-primary">Alright, Get the Free Quote</button>
                         </form>
                     </div>
