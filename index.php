@@ -56,7 +56,7 @@
         $mail->isHTML(true);  // Set email format to HTML
 
         $bodyContent = '<p>Thankyou for choosing Rsu services.. Your Request has been Approved.. Get in touch Shortly!!</p>';
-        $bodyContent .= '<a href="rsusolutions.com/register.php"><img src="http://rsusolutions.com/images/rsu-email.jpg" style="width:70%;height:450px;" alt="RSU Solutions" class="center"></a>';
+        $bodyContent .= '<a href="rsusolutions.com/index.php"><img src="http://rsusolutions.com/images/rsu-email.jpg" style="width:70%;height:450px;" alt="RSU Solutions" class="center"></a>';
         
         $adminmsg ='Name:' .$name .'<br>';
         $adminmsg .='Email:' .$email.'<br>';
@@ -81,7 +81,7 @@
         $mail->ClearAddresses();
 
         $mail->AddAddress('abdulkafoor1996@gmail.com');
-        $mail->addCC('asukkoorj@example.com');
+        $mail->addCC('asukkoorj@gmail.com');
         $mail->Body = $adminmsg;
         $mail->Send();
 
