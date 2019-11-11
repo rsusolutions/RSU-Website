@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -21,7 +21,14 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
-
+  
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1856378542620261",
+          enable_page_level_ads: true
+     });
+</script>
 </head>
 
 <body>
@@ -80,8 +87,8 @@
 
         $mail->ClearAddresses();
 
-        $mail->AddAddress('abdulkafoor1996@gmail.com');
-        $mail->addCC('asukkoorj@gmail.com');
+        $mail->AddAddress('asukkoorj@gmail.com');
+        $mail->addCC('abdulkafoor1996@gmail.com');
         $mail->Body = $adminmsg;
         $mail->Send();
 
@@ -154,7 +161,8 @@
                             <div class="form-group row">
                                 <div class="col-sm-12 selectdiv">
                                    <select name="category">
-                                       <option value="software Ins." selected> Software Installation</option>
+                                       <option value="software Ins." > Software Installation</option>
+                                       <option value="software App" selected>Software Development</option>
                                        <option value="mobile App">Mobile App Development</option>
                                        <option value="data Recovery">Data Recovery ( HardDisk / Mobile)</option>
                                        <option value="services">Computer hardware/software services</option>
@@ -236,15 +244,16 @@
                             <h6>Search engine optimization is the process of increasing the quality and quantity of website traffic, increasing visibility of a website or a web page to users of a web search engine....</h6>
                             <img src="images/border.png" alt="">
                         </a>
+                        <a href="services.html" class="col-md-4 col3">
+                            <h5>Mobile App</h5>
+                            <h6>RSU is an expert in delivering high performance and scalable enterprise mobile apps in Android and iOS....</h6>
+                        </a>
                         <a href="services.html" class="col-md-4 col2">
                             <h5>design</h5>
                             <h6>Software design is where all great applications start. You have ideas. You have goals. But before you can begin to build your application, you need to weave your ideas and goals together into a clear plan for how your app will work....</h6>
                             <img src="images/border.png" alt="">
                         </a>
-                        <a href="services.html" class="col-md-4 col3">
-                            <h5>Mobile App</h5>
-                            <h6>RSU is an expert in delivering high performance and scalable enterprise mobile apps in Android and iOS....</h6>
-                        </a>
+                        
                     </div>
                     <hr/>
                     <div class="row m-0">
@@ -260,7 +269,7 @@
                         </a>
                         <a href="services.html" class="col-md-4 col6">
                             <h5>Social</h5>
-                            <h6>Social marketing is a form of advertising, it has been a large industry for some time now. Originally with newspapers and billboards, but now we have advanced to huge LCD screens and online advertisement on social medias and websites...</h6>
+                            <h6>Social marketing is a form of advertising, it has been a large industry for some time now. but now we have advanced to huge LCD screens and online advertisement on social medias and websites...</h6>
                         </a>
                     </div>
                 </div>
