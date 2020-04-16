@@ -33,8 +33,8 @@
     <script type="text/javascript">
 jQuery(document).ready(function(){
 var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec'
-
+    url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec',
+    mydata = JSON.stringify($('#myform').serialize());
 $('#submit-form').on('click', function(e) {
     
   e.preventDefault();
@@ -42,7 +42,7 @@ $('#submit-form').on('click', function(e) {
     url: url,
     method: "GET",
     dataType: "json",
-    data: $form.serializeObject()
+    data: mydata
   }).success(
     alert("form-submited")
   );
