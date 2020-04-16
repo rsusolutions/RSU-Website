@@ -30,8 +30,9 @@
           enable_page_level_ads: true
      });
 </script>
-<script>
-    var $form = $('form#test-form'),
+    <script type="text/javascript">
+jQuery(document).ready(function(){
+var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec'
 
 $('#submit-form').on('click', function(e) {
@@ -46,6 +47,7 @@ $('#submit-form').on('click', function(e) {
     alert("form-submited")
   );
 })
+});
 </script>
 </head>
 
