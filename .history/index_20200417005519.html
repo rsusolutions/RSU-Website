@@ -40,17 +40,11 @@ $('#submit-form').on('click', function(e) {
   e.preventDefault();
   var jqxhr = $.ajax({
     url: url,
-    headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type':'application/json'
-        },
     method: "GET",
-    dataType: "jsonp",
+    dataType: "json",
     data: mydata
-  }).success(function (data){
-
+  }).success(
     alert("form-submited")
-  }
   );
 })
 });

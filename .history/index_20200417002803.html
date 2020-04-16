@@ -1,4 +1,4 @@
-﻿﻿<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -30,30 +30,22 @@
           enable_page_level_ads: true
      });
 </script>
-    <script type="text/javascript">
-jQuery(document).ready(function(){
-var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec',
-    mydata = JSON.stringify($('#myform').serialize());
+<script>
+    var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec'
+
 $('#submit-form').on('click', function(e) {
-    
+    alert("click")
   e.preventDefault();
   var jqxhr = $.ajax({
     url: url,
-    headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type':'application/json'
-        },
     method: "GET",
-    dataType: "jsonp",
-    data: mydata
-  }).success(function (data){
-
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
     alert("form-submited")
-  }
   );
 })
-});
 </script>
 </head>
 
