@@ -23,11 +23,29 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://www.google.com/recaptcha/api.js?render=6Lfp0cwUAAAAAGNMqhOZdjrGueU6BsoufN_HOekm"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
           google_ad_client: "ca-pub-1856378542620261",
           enable_page_level_ads: true
      });
+</script>
+<script>
+    var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbxT1j4SiEPVVbHjZXRlLChNm9hoX5kSutwt1E0wauGMUqOCHrNm/exec'
+
+$('#submit-form').on('click', function(e) {
+    alert("click")
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    alert("form-submited")
+  );
+})
 </script>
 </head>
 
@@ -84,7 +102,7 @@
                 <!-- Grid row-->
                 <div class="row">
                     <div class="col-md-12">
-                        <form method="post" action="contact.html">
+                        <form method="post" id="test-form" action="">
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -115,7 +133,7 @@
                                 </div>
                             </div>
                             <span>Or Call <a href="#">88708 09744</a></span>
-                            <button type="submit" name="submit" class="btn btn-primary">Alright, Get the Free Quote</button>
+                            <button type="submit" name="submit" id="submit-form" class="btn btn-primary">Alright, Get the Free Quote</button>
                         </form>
                     </div>
                 </div>
