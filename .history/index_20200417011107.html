@@ -45,9 +45,16 @@ $('#submit-form').on('click', function(e) {
             'Content-Type':'application/json'
         },
     method: "GET",
+<<<<<<< HEAD
     dataType: "jsonp",
     data: mydata
   }).success(function (data){
+
+=======
+    dataType: "json",
+    data: mydata
+  }).success(
+>>>>>>> af17e3fffa78f118edaa01f1b02b94b1f7509768
     alert("form-submited")
   }
   );
