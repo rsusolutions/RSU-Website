@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Bootstrap Example</title>
@@ -58,15 +58,24 @@
     body {
   overflow: hidden; /* Hide scrollbars */
 }
- #bottom1:hover{background-color:blue;}
-  #bottom2:hover{background-color:blue;}
-   #bottom3:hover{background-color:blue;}
+ #bottom1:hover{background-color:yellow;}
+  #bottom2:hover{background-color:yellow;}
+   #bottom3:hover{background-color:yellow;}
 
-    #bottom4:hover{background-color:blue;}
+    #bottom4:hover{background-color:yellow;}
+	.bottomcss{
+	
+	background-color: blue;
+    color: white;
+	}
+	.holds-the-iframe {
+  background:url(../images/loader.gif) center center no-repeat;
+}
 </style>
 <body>
 
-    <iframe src="http://tamilthurithaseithigal.rsusolutions.com/" name="iframe" id ="iframe"style=" width: 100%; height: 1000px;  overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="holds-the-iframe"><iframe src="http://tamilthurithaseithigal.rsusolutions.com/" name="iframe" id ="iframe"style=" width: 100%; height: 1000px;  overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+	</div>
     <div class="container">
 
         <!--<div>
@@ -79,23 +88,23 @@
             <button type="button" style="width: 33%;" class="btn btn-primary ">Sony</button>
         </div>-->
         <div class="bottom-nav pos-fixed">
-            <button id="bottom1" class="button" onclick="setURL(this.id,'http://tamilthurithaseithigal.rsusolutions.com/')">
+            <button id="bottom1" class="button bottomcss" onclick="setURL(this.id,'http://tamilthurithaseithigal.rsusolutions.com/')">
                 <span class="icon mif-news"></span>
                 <span class="label" style="color:black">News</span>
             </button>
-            <button id="bottom2" class="button" onclick="setURL(this.id,'http://rsusolutions.com/quiz/')">
+            <button id="bottom2" class="button bottomcss" onclick="setURL(this.id,'http://rsusolutions.com/quiz/')">
                 <span class="icon mif-question"></span>
                 <span class="label" style="color:black">Quiz</span>
             </button>
-            <button id="bottom3" class="button" onclick="setURL(this.id,'http://rsusolutions.com/App/')">
+            <button id="bottom3" class="button bottomcss" onclick="setURL(this.id,'http://rsusolutions.com/App/')">
                 <span class="icon mif-favorite"></span>
                 <span class="label" style="color:black">Offer</span>
             </button>
-            <button id="bottom4" class="button" onclick="setURL(this.id,'https://www.youtube.com/channel/UC-L7vyKduus9P4GgVvdgolw')">
+            <button id="bottom4" class="button bottomcss" onclick="setURL(this.id,'https://m.youtube.com/channel/UC-L7vyKduus9P4GgVvdgolw')">
                 <span class="icon mif-video-camera"></span>
                 <span class="label" style="color:black">Video</span>
             </button>
-            <button id="bottom4" class="button" onclick="setURL(this.id,'https://www.covid19india.org/')">
+            <button id="bottom4" class="button bottomcss" onclick="setURL(this.id,'https://www.covid19india.org/')">
                 <span class="icon mif-paragraph-left"></span>
                 <span class="label" style="color:black">Covid-19</span>
             </button>
