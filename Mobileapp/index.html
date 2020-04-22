@@ -42,11 +42,9 @@
         window.onload = onloadfn;
         function onloadfn()
         {
-		    var iframe = document.getElementById("iframe");
-					//iframe.src = "about:blank";
-					document.getElementById("loader").style.display = "block";
+		    
 					loaded();
-				  iframe.src="http://tamilthurithaseithigal.rsusolutions.com/";
+				 
             //document.getElementById("bottom1").style.backgroundColor = 'blue';
             //document.getElementById("bottom2").style.backgroundColor = 'white';
             //document.getElementById("bottom3").style.backgroundColor = 'white';
@@ -96,13 +94,13 @@ top: 3%;
 	.holds-the-iframe {
 	height: 120px;
 	width:100%;
-	display:none;
+	
   background:url(loader.gif) center center no-repeat;
 }
 </style>
 <body>
 
-    <div class="iframe-container"><iframe src="" name="iframe" id ="iframe"style=" width: 100%; height: 10000px;  overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="iframe-container"><iframe src="http://tamilthurithaseithigal.rsusolutions.com/" name="iframe" id ="iframe"style=" width: 100%; height: 10000px;  overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 	 <div id="loader" name="loader" class="holds-the-iframe"></div>
 	</div>
     <div class="container">
