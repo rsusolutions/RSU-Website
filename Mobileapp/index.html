@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="metro.min.js"></script>
+    <link rel="stylesheet" href="metro-all.min.css">
+    <link rel="stylesheet" href="metro-icons.min.css">
+    
+    <script type="text/javascript">
+        function setURL(id,url){
+            document.getElementById('iframe').src = url;
+            //alert(id);
+            //var arr =["bottom1","bottom2","bottom3","bottom3"]
+            
+            //    for (var j = 0; j < arr.length; j++) {
+            //        if (id == arr[j]) {
+            //            document.getElementById(id).style.backgroundColor = 'blue';
+            //        }
+            //        else {
+            //            document.getElementById(id).style.backgroundColor = 'white';
+            //        }
+            //}
+            
+
+
+
+
+        }
+        window.onload = onloadfn;
+        function onloadfn()
+        {
+            //document.getElementById("bottom1").style.backgroundColor = 'blue';
+            //document.getElementById("bottom2").style.backgroundColor = 'white';
+            //document.getElementById("bottom3").style.backgroundColor = 'white';
+            //document.getElementById("bottom4").style.backgroundColor = 'white';
+
+        }
+
+
+    </script>
+</head>
+<style>
+    .btn-group {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+    body {
+  overflow: hidden; /* Hide scrollbars */
+}
+ #bottom1:hover{background-color:blue;}
+  #bottom2:hover{background-color:blue;}
+   #bottom3:hover{background-color:blue;}
+
+    #bottom4:hover{background-color:blue;}
+</style>
+<body>
+
+    <iframe src="http://tamilthurithaseithigal.rsusolutions.com/" name="iframe" id ="iframe"style=" width: 100%; height: 1000px;  overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="container">
+
+        <!--<div>
+        <object type="text/html" data="https://docs.google.com/forms/d/e/1FAIpQLSd6UtygYL3RCOFx44gQwIOitrrmlKy3ZG4qlwYZ9wipGIknxw/viewform?embedded=true" width="100%" height="500px"  style="overflow:hidden;"></object>
+    </div>-->
+
+        <!--<div class="btn-group btn-block row">
+            <button type="button " style="width: 33%;" class="btn btn-primary ">Apple</button>
+            <button type="button" style="width: 34%;" class="btn btn-primary ">Samsung</button>
+            <button type="button" style="width: 33%;" class="btn btn-primary ">Sony</button>
+        </div>-->
+        <div class="bottom-nav pos-fixed">
+            <button id="bottom1" class="button" onclick="setURL(this.id,'http://tamilthurithaseithigal.rsusolutions.com/')">
+                <span class="icon mif-news"></span>
+                <span class="label" style="color:black">News</span>
+            </button>
+            <button id="bottom2" class="button" onclick="setURL(this.id,'http://rsusolutions.com/quiz/')">
+                <span class="icon mif-question"></span>
+                <span class="label" style="color:black">Quiz</span>
+            </button>
+            <button id="bottom3" class="button" onclick="setURL(this.id,'http://rsusolutions.com/App/')">
+                <span class="icon mif-favorite"></span>
+                <span class="label" style="color:black">Offer</span>
+            </button>
+            <button id="bottom4" class="button" onclick="setURL(this.id,'https://www.youtube.com/channel/UC-L7vyKduus9P4GgVvdgolw')">
+                <span class="icon mif-video-camera"></span>
+                <span class="label" style="color:black">Video</span>
+            </button>
+            <button id="bottom4" class="button" onclick="setURL(this.id,'https://www.covid19india.org/')">
+                <span class="icon mif-paragraph-left"></span>
+                <span class="label" style="color:black">Covid-19</span>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
