@@ -36,9 +36,17 @@
 					document.getElementById("loader").style.display = "block";
 					loaded();
 				  iframe.src=url;
-                  window.open(url, '_system');
-
+                 openRequestedPopup(url);
         }
+		var windowObjectReference;
+
+function openRequestedPopup( url) {
+  windowObjectReference = window.open(
+    url,
+    "DescriptiveWindowName",
+    "resizable,scrollbars,status"
+  );
+}
         window.onload = onloadfn;
         function onloadfn()
         {
