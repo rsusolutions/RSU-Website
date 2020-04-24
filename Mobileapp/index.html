@@ -36,7 +36,8 @@
 					document.getElementById("loader").style.display = "block";
 					loaded();
 				  iframe.src=url;
-                 openRequestedPopup(url);
+				  window.open("googlechrome://navigate?url=" + url,"_system");
+                // openRequestedPopup(url);
         }
 		var windowObjectReference;
 
